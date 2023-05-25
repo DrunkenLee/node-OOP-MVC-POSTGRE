@@ -1,0 +1,142 @@
+[
+  {
+    "name": "Minyak Kelapa",
+    "CategoryId": 1,
+    "stock": 15,
+    "price": 20000,
+    "productDate": "2021-02-03"
+  },
+  {
+    "name": "Minyak Sawit",
+    "CategoryId": 1,
+    "stock": 9,
+    "price": 23000,
+    "productDate": "2021-02-01"
+  },
+  {
+    "name": "Minyak Nabati",
+    "CategoryId": 1,
+    "stock": 3,
+    "price": 15000,
+    "productDate": "2021-02-03"
+  },
+  {
+    "name": "Beras",
+    "CategoryId": 1,
+    "stock": 5,
+    "price": 3000,
+    "productDate": "2021-04-03"
+  },
+  {
+    "name": "Gula",
+    "CategoryId": 1,
+    "stock": 30,
+    "price": 1000,
+    "productDate": "2021-02-05"
+  },
+  {
+    "name": "Gula Merah",
+    "CategoryId": 1,
+    "stock": 45,
+    "price": 550,
+    "productDate": "2021-02-16"
+  },
+  {
+    "name": "Telur",
+    "CategoryId": 1,
+    "stock": 28,
+    "price": 2100,
+    "productDate": "2021-02-17"
+  },
+  {
+    "name": "Vitamin C",
+    "CategoryId": 2,
+    "stock": 5,
+    "price": 50000,
+    "productDate": "2021-03-08"
+  },
+  {
+    "name": "Vitamin D",
+    "CategoryId": 2,
+    "stock": 20,
+    "price": 160000,
+    "productDate": "2021-02-09"
+  },
+  {
+    "name": "Minyak Ikan Omega 3",
+    "CategoryId": 2,
+    "stock": 12,
+    "price": 180000,
+    "productDate": "2021-03-10"
+  },
+  {
+    "name": "Vitamin A",
+    "CategoryId": 2,
+    "stock": 52,
+    "price": 20000,
+    "productDate": "2021-02-03"
+  },
+  {
+    "name": "Minyak Kayu Putih",
+    "CategoryId": 2,
+    "stock": 12,
+    "price": 15000,
+    "productDate": "2021-04-12"
+  },
+  {
+    "name": "NaCL",
+    "CategoryId": 2,
+    "stock": 99,
+    "price": 7000,
+    "productDate": "2021-04-06"
+  },
+  {
+    "name": "Betadine",
+    "CategoryId": 2,
+    "stock": 52,
+    "price": 11000,
+    "productDate": "2021-02-13"
+  },
+  {
+    "name": "Setrika",
+    "CategoryId": 3,
+    "stock": 2,
+    "price": 230000,
+    "productDate": "2021-02-14"
+  },
+  {
+    "name": "Kulkas",
+    "CategoryId": 3,
+    "stock": 4,
+    "price": 1450000,
+    "productDate": "2021-02-15"
+  },
+  {
+    "name": "Televisi",
+    "CategoryId": 3,
+    "stock": 23,
+    "price": 980000,
+    "productDate": "2021-03-16"
+  },
+  {
+    "name": "Mesin Cuci",
+    "CategoryId": 3,
+    "stock": 8,
+    "price": 2300000,
+    "productDate": "2021-03-17"
+  },
+  {
+    "name": "Komputer",
+    "CategoryId": 3,
+    "stock": 17,
+    "price": 1200000,
+    "productDate": "2021-04-18"
+  },
+  {
+    "name": "Lampu",
+    "CategoryId": 3,
+    "stock": 42,
+    "price": 64000,
+    "productDate": "2021-02-19"
+  }
+]

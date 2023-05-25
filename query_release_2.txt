@@ -1,0 +1,119 @@
+
+-- 1. Tampilkan barang beserta kategori nya
+-- okeh !!
+
+SELECT p.id, p.name AS product_name, pc.name AS Category, p.stock, p.price, p.productDate
+FROM products p
+INNER JOIN "productCategories" pc ON p.category_id = pc.id;
+
+
+-- 2. Tampilkan kategori sembako mempunyai barang apa saja ?
+-- siap !!
+
+SELECT
+	p.id,
+	p.name,
+	pc.name AS Category,
+	p.stock,
+	p.price,
+	p.productDate
+FROM
+	products p
+INNER JOIN "productCategories" pc ON
+	p.category_id = pc.id
+WHERE
+	pc.name = 'Sembako';
+
+
+--3. Tampilkan barang dengan stok terbanyak dari kategori elektronik
+
+SELECT
+	p.id,
+	p.name AS Product_Name,
+	pc.name AS Category_Name,
+	p.stock AS Max_Stock,
+	p.price,
+	p.productDate
+FROM
+	products p
+INNER JOIN "productCategories" pc ON
+	p.category_id = pc.id
+WHERE
+	pc.name = 'Elektronik'
+	AND p.stock = (
+	SELECT
+		MAX(stock)
+	FROM
+		products
+	WHERE
+		category_id = pc.id
+  );
+ 
+ -- 4. Tampilkan barang berserta kategorinya dengan harga termahal
+ 
+ SELECT
+	p.id,
+	p.name AS Product_Name,
+	pc.name AS Category_Name,
+	p.stock,
+	p.price AS Max_Stock,
+	p.productDate
+FROM
+	products p
+INNER JOIN "productCategories" pc ON
+	p.category_id = pc.id
+WHERE
+	 p.price = (
+	SELECT
+		MAX(price)
+	FROM
+		products
+  );
+ 
+ -- 5. Tampilkan Harga Rata-Rata dari barang yang mempunyai kategori kesehatan
+ 
+ SELECT
+	pc.name AS "Category_Name",
+	round(AVG(p.price),2)  AS "Average"
+FROM
+	products p
+INNER JOIN "productCategories" pc ON
+	p.category_id = pc.id
+WHERE 
+	pc."name" = 'Kesehatan'
+GROUP BY pc.name;
+	
+
+-- 6. Tampilkan jumlah stock dari barang yang mempunyai kategori kesehatan
+
+ SELECT
+	pc.name AS "Category_Name",
+	round(SUM(p.price),2)  AS "Summary"
+FROM
+	products p
+INNER JOIN "productCategories" pc ON
+	p.category_id = pc.id
+WHERE 
+	pc."name" = 'Sembako'
+GROUP BY pc.name;
+
+-- 7. Tampilkan jumlah stock dalam bulanan dari kategori kesehatan
+
+ SELECT
+ 	TO_CHAR(p.productdate, 'Month') AS "perMonth",
+ 	round(SUM(p."stock"))  AS "Summary Stock"
+FROM
+	products p
+JOIN "productCategories" pc ON
+	p.category_id = pc.id
+WHERE 
+	pc."name" = 'Kesehatan'
+GROUP BY "perMonth"
+ORDER BY "Summary Stock" DESC;
+
+
+
+
+
+
+
